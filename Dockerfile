@@ -5,6 +5,7 @@ LABEL maintainer="Infinity Works"
 RUN apk add --update --no-cache \
     python \
     py-pip \
-    groff  && \
+    groff \
+    ca-certificates && \
     pip install --upgrade awscli && \
     apk -v --purge del py-pip
